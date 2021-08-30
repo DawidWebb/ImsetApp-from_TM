@@ -1,0 +1,126 @@
+@import "../../RootStyles/common.scss";
+
+.wrapper {
+    @include wrapper;
+    background-image: url("../../assets/image/net_small.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 5;
+
+    .interiorImage {
+        position: absolute;
+        top: 0;
+        left: 40%;
+
+        .container,
+        .clipping {
+            width: 280px;
+            height: 320px;
+
+        }
+
+        .container {
+            margin: 0 auto;
+            background-color: transparent;
+        }
+
+        .clipping {
+            background-image: url("../../assets/image/portrait-4183658_640.jpg");
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(30% 0, 0 0, 35% 55%, 35% 100%, 65% 100%, 65% 55%, 100% 0, 70% 0, 50% 30%, 30% 0, 50% 15%, 60% 1%);
+            border-radius: 50px;
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        z-index: 2;
+    }
+
+    .icons {
+        width: 20%;
+        margin-top: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        div {
+            flex-basis: 35%;
+            border: 1px solid $text-second;
+            border-radius: 50%;
+            padding: 4px;
+            display: flex;
+        }
+
+        span {
+            font-size: $xl-fz;
+            flex-basis: 20%;
+        }
+    }
+
+    .title {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40px 40px 40px 40px 40px 40px 40px;
+        grid-template-rows: 30px 30px 30px;
+
+
+        p {
+            text-transform: uppercase;
+        }
+
+        p:nth-child(1) {
+            grid-area: 1/1/2/8;
+            font-size: $xl-fz;
+            font-weight: 700;
+            align-self: end;
+        }
+
+        p:nth-child(2) {
+            grid-area: 2/1/3/5;
+            align-self: center;
+            font-size: $xl-fz;
+
+            span:nth-child(1) {
+                color: $violet;
+                font-weight: 700;
+            }
+
+            span:nth-child(2) {
+                color: $violet;
+                font-weight: normal;
+
+            }
+        }
+
+        p:nth-child(3) {
+            grid-area: 3/1/4/5;
+            font-size: $m-fz/1.1;
+            align-self: end;
+        }
+
+        p:nth-child(4) {
+            grid-area: 2/4/4/5;
+            font-size: $x-fz*2.7;
+            font-weight: 700;
+            align-self: center;
+            justify-self: end;
+
+            color: $pink;
+        }
+
+        p:nth-child(5) {
+            grid-area: 3/5/4/6;
+            color: $pink;
+            align-self: end;
+            font-weight: 700;
+        }
+    }
+}
