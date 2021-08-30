@@ -1,0 +1,10 @@
+@import "./variables.scss";
+
+@mixin wrapper {
+    position: relative;
+    width: 90vw;
+    min-height: 300px;
+    color: $text-second;
+    padding: 10px;
+    overflow: hidden;
+}

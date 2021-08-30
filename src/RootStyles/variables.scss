@@ -1,0 +1,26 @@
+$background: rgb(20, 20, 20);
+$box: rgb(59, 59, 59);
+$text-first: rgb(216, 145, 2);
+$text-second: #fff;
+$pink: rgb(236, 0, 201);
+$violet: hsl(288, 36%, 51%);
+$green: rgb(53, 212, 53);
+$blue: rgba(255, 102, 0, 0.918);
+
+
+$xs-fz: 14px;
+$s-fz: 16px;
+$m-fz: 18px;
+$l-fz: 20px;
+$x-fz: 24px;
+$xl-fz: 28px;
+
+$header: 100px;
+$transition: 0.4s;
+
+$breakpoints: (x-small: 480px,
+  small: 640px,
+  medium: 800px,
+  large: 1020px,
+  x-large: 1280px,
+);
