@@ -1,0 +1,16 @@
+@import "../../RootStyles/common.scss";
+
+.wrapper {
+    width: 100%;
+    background-color: $background;
+
+    .inside {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
