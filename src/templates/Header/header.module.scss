@@ -1,0 +1,80 @@
+@import "../../RootStyles/common.scss";
+
+.wrapper {
+    width: 100%;
+    background-color: $background;
+
+    .inside {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+        .burger {
+            flex-basis: 10%;
+            height: 30px;
+            background-color: $box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                &:hover {
+                    fill: $green;
+                }
+            }
+        }
+
+        .info {
+            flex-basis: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $shaddow;
+
+
+                &:hover {
+                    color: $green;
+                }
+            }
+
+            div {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                justify-content: center;
+
+
+                p {
+                    text-transform: uppercase;
+                    color: $shaddow;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $green;
+                    }
+                }
+
+            }
+
+            .phone {
+                p {
+                    color: $green;
+                    font-weight: 700;
+                }
+
+            }
+
+
+        }
+
+    }
+}

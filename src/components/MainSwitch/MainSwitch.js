@@ -41,6 +41,16 @@ const MainSwitch = () => {
           path="/support"
           render={() => <ServicesUnderConstruction />}
         />
+        <Route
+          exact
+          path="/customer-service"
+          render={() => <ServicesUnderConstruction />}
+        />
+        <Route
+          exact
+          path="/user"
+          render={() => <ServicesUnderConstruction />}
+        />
 
         <Redirect to="/" />
       </Switch>

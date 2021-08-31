@@ -6,7 +6,7 @@ import { Header, Footer } from "./templates";
 function App() {
   return (
     <Router>
-      {/* <Header /> */}
+      <Header />
       <Fragment>
         <MainSwitch />
       </Fragment>

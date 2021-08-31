@@ -1,4 +1,6 @@
 export { default as AdditionalOfer } from "./AdditionalOffer";
+export { default as Application } from "./Application";
+export { default as Header } from "./Header";
 export { default as MainOffer } from "./MainOffer";
 export { default as OnLine } from "./OnLine";
 export { default as PacgagesOffer } from "./PacgagesOffer";

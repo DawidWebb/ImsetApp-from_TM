@@ -1,5 +1,6 @@
 import {
   AdditionalOfer,
+  Application,
   MainOffer,
   OnLine,
   PacgagesOffer,
@@ -30,7 +31,9 @@ const StartViev = () => {
         <div className={styles.support}>
           <Support />
         </div>
-        <div className={styles.application}></div>
+        <div className={styles.application}>
+          <Application />
+        </div>
       </div>
     </div>
   );
