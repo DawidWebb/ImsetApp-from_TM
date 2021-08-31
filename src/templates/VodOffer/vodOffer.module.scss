@@ -2,78 +2,100 @@
 
 .wrapper {
     @include wrapper;
-    background-image: url("../../assets/image/capitan_small.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
-
-    .title {
-        h2 {}
-
-        p {
-            font-size: $xs-fz;
-        }
-    }
-
-    .icons {
+    .inside {
+        @include inside;
+        background-image: url("../../assets/image/capitan_small.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-    }
-
-    .select {
-        display: flex;
+        flex-direction: column;
         justify-content: space-between;
 
-        .name {
-            display: flex;
-            flex-wrap: wrap;
+
+        .title {
+
 
             p {
-                font-size: $m-fz;
-                flex-basis: 100%;
-            }
-
-            p:nth-child(3) {
-                flex-basis: 60%;
                 font-size: $xs-fz;
-                text-transform: uppercase;
-                font-weight: 700;
-                color: $green;
-            }
-
-            p:nth-child(4) {
-                flex-basis: 40%;
-                font-size: $xs-fz;
-                color: $blue;
-                font-weight: 700;
             }
         }
 
-        .info {
+        .icons {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            padding-left: 20px;
-            border-left: 2px solid $text-second;
 
-            p {
-                text-align: center;
-                text-transform: uppercase;
-                font-size: $xs-fz;
+            svg {
+                fill: $text-second;
+                cursor: pointer;
+
+                &:hover {
+                    fill: $green;
+                }
             }
 
-            p:nth-child(2) {
-                font-weight: 700;
-                font-size: $m-fz;
+        }
+
+        .select {
+            display: flex;
+            justify-content: space-between;
+
+            .name {
+                display: flex;
+                flex-wrap: wrap;
+
+                p {
+                    font-size: $m-fz;
+                    flex-basis: 100%;
+                }
+
+                p:nth-child(3) {
+                    flex-basis: 60%;
+                    font-size: $xs-fz;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: $green;
+                }
+
+                p:nth-child(4) {
+                    flex-basis: 40%;
+                    font-size: $xs-fz;
+                    color: $blue;
+                    font-weight: 700;
+                }
             }
 
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: 20px;
+                border-left: 2px solid $text-second;
 
+                p {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: $xs-fz;
+                }
+
+                p:nth-child(2) {
+                    font-weight: 700;
+                    font-size: $m-fz;
+                }
+
+
+            }
+        }
+    }
+
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        width: 25vw;
+
+        .inside {
+            width: 100%;
+            background-image: url("../../assets/image/capitan_big.jpg");
         }
     }
 }

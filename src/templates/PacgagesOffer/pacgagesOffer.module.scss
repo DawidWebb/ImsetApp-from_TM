@@ -2,96 +2,126 @@
 
 .wrapper {
     @include wrapper;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $violet;
 
-
-    .title {
-        margin-bottom: 30px;
-        text-transform: uppercase;
-
-        p {
-            font-size: $xs-fz/1.2;
-        }
-    }
-
-    .icons {
+    .inside {
+        @include inside;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $violet;
 
-        .wrap {
-            position: relative;
 
-            div:nth-child(1) {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 80px;
-                height: 80px;
-                border: 1px solid $shaddow;
-                border-radius: 50%;
-                border-bottom: none;
 
-                .iconWrap {
+        .title {
+            margin-bottom: 30px;
+            text-transform: uppercase;
+
+            p {
+                font-size: $xs-fz/1.2;
+            }
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .wrap {
+                position: relative;
+
+                div:nth-child(1) {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 50px;
-                    height: 50px;
-                    background-color: $text-second;
+                    width: 80px;
+                    height: 80px;
+                    border: 1px solid $shaddow;
                     border-radius: 50%;
+                    border-bottom: none;
 
+                    .iconWrap {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 50px;
+                        height: 50px;
+                        background-color: $text-second;
+                        border-radius: 50%;
+
+                        svg {
+                            fill: $violet;
+                        }
+                    }
+                }
+
+                div:nth-child(2) {
+                    position: absolute;
+                    bottom: -35px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: $xs-fz/1.4;
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+
+            button {
+                border: none;
+                border: 1px solid $text-second;
+                background-color: darken($violet, 25%);
+                color: $text-second;
+                font-size: $s-fz;
+                text-transform: uppercase;
+                font-weight: 700;
+                padding: 10px;
+                transition: $transition;
+
+                &:hover {
+                    background-color: white;
+                    color: $violet;
                 }
             }
 
-            div:nth-child(2) {
-                position: absolute;
-                bottom: -35px;
-                text-align: center;
-                text-transform: uppercase;
-                font-size: $xs-fz/1.4;
+            a {
+                text-decoration: none;
+                color: $text-second;
+                transition: $transition;
 
-                span {
-                    font-weight: 700;
+                &:hover {
+                    color: darken($violet, 25%);
                 }
             }
         }
     }
 
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        margin-top: 80px;
-
-        button {
-            border: none;
-            border: 1px solid $text-second;
-            background-color: darken($violet, 25%);
-            color: $text-second;
-            font-size: $s-fz;
-            text-transform: uppercase;
-            font-weight: 700;
-            padding: 10px;
-            transition: $transition;
-
-            &:hover {
-                background-color: white;
-                color: $violet;
+    @media screen and (orientation: landscape) {
+        .inside {
+            .buttons {
+                width: 70%;
+                align-self: center;
+                text-align: center;
             }
         }
+    }
 
-        a {
-            text-decoration: none;
-            color: $text-second;
-            transition: $transition;
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        width: 55vw;
 
-            &:hover {
-                color: darken($violet, 25%);
-            }
+        .inside {
+            width: 100%;
+
         }
+    }
+
+    @media screen and (min-width: map-get($breakpoints, x-large)) {
+        width: 50vw;
     }
 }

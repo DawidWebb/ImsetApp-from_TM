@@ -1,10 +1,30 @@
 @import "./variables.scss";
 
 @mixin wrapper {
-    position: relative;
-    width: 90vw;
-    min-height: 300px;
+    width: 100vw;
+    margin: 0 auto;
     color: $text-second;
-    padding: 10px;
+    background-color: $background;
     overflow: hidden;
+}
+
+@mixin inside {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+
+
+    @media screen and (orientation: landscape) {
+        width: 80%;
+        padding: 10px;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, x-large)) {
+
+        width: 75%;
+
+    }
 }

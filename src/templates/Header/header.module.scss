@@ -1,17 +1,18 @@
 @import "../../RootStyles/common.scss";
 
 .wrapper {
-    width: 100%;
+    @include wrapper;
     background-color: $box;
+    ;
 
     .inside {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-        padding-top: 20px;
+        padding: 20px;
+        height: 120px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-
 
         .burger {
             flex-basis: 10%;
@@ -46,6 +47,11 @@
                 }
             }
 
+            a,
+            p {
+                font-size: $xs-fz;
+            }
+
             div {
                 display: flex;
                 justify-content: space-around;
@@ -70,11 +76,55 @@
                     color: $green;
                     font-weight: 700;
                 }
+            }
+
+            .user {
+                &:hover>svg {
+                    fill: $green;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (orientation: landscape) {
+        .inside {
+            width: 80%;
+            height: 65px;
+            padding-top: 0;
+
+            .burger {
+                flex-basis: 65px;
+                height: 65px;
 
             }
 
+            .info {
+                flex-basis: 60%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
 
+            }
         }
+    }
 
+    @media screen and (min-width: map-get($breakpoints, small)) {
+        .inside {
+            padding-left: 0;
+
+            .info {
+                align-items: flex-start;
+                margin-top: 10px;
+
+            }
+        }
+    }
+
+    @media screen and (min-width: map-get($breakpoints, x-large)) {
+
+        .inside {
+            width: 75%
+        }
     }
 }

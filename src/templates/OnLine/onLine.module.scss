@@ -2,75 +2,110 @@
 
 .wrapper {
     @include wrapper;
-    padding: 0;
-    background-color: $green;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-image: url('../../assets/image/magic_small.jpg');
-    background-position: center;
 
-
-    .title {
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
+    .inside {
+        @include inside;
+        padding: 0;
         background-color: $green;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url('../../assets/image/magic_small.jpg');
+        background-position: center;
+        background-size: cover;
 
-        h2 {
-            text-transform: uppercase;
+
+
+        .title {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: $green;
+
+            h2 {
+                text-transform: uppercase;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: 20px;
+                border-left: 2px solid $text-second;
+
+                p {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: $xs-fz;
+                }
+
+                p:nth-child(2) {
+                    font-weight: 700;
+                    font-size: $m-fz;
+                }
+
+                svg {
+                    fill: $text-second;
+
+                }
+            }
         }
 
-        .info {
+
+        .icons {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+
+            svg {
+                fill: $text-second;
+                cursor: pointer;
+
+                &:hover {
+                    fill: $green;
+                }
+            }
+        }
+
+
+
+        .name {
+            display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            padding-left: 20px;
-            border-left: 2px solid $text-second;
+            justify-content: center;
+            border-bottom: 5px solid $green;
+            padding-bottom: 10px;
 
             p {
                 text-align: center;
-                text-transform: uppercase;
-                font-size: $xs-fz;
+                font-size: $m-fz;
+                flex-basis: 100%;
             }
 
             p:nth-child(2) {
+                flex-basis: 60%;
+                font-size: $xs-fz;
+                text-transform: uppercase;
                 font-weight: 700;
-                font-size: $m-fz;
+                color: $green;
             }
+
         }
     }
 
-
-    .icons {
-        display: flex;
-        justify-content: space-between;
-
+    @media screen and (orientation: landscape) {
+        .inside {
+            padding: 0;
+        }
     }
 
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        width: 25vw;
 
+        .inside {
+            width: 100%;
+            min-height: 328px;
 
-    .name {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 5px solid $green;
-        padding-bottom: 10px;
-
-        p {
-            text-align: center;
-            font-size: $m-fz;
-            flex-basis: 100%;
         }
-
-        p:nth-child(2) {
-            flex-basis: 60%;
-            font-size: $xs-fz;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: $green;
-        }
-
     }
 }
