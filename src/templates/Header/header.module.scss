@@ -3,7 +3,6 @@
 .wrapper {
     @include wrapper;
     background-color: $box;
-    ;
 
     .inside {
         width: 100%;
@@ -13,6 +12,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
 
         .burger {
             flex-basis: 10%;
@@ -89,7 +89,7 @@
 
     @media screen and (orientation: landscape) {
         .inside {
-            width: 80%;
+            width: 81%;
             height: 65px;
             padding-top: 0;
 
@@ -111,7 +111,9 @@
 
     @media screen and (min-width: map-get($breakpoints, small)) {
         .inside {
-            padding-left: 0;
+            padding: 0;
+
+
 
             .info {
                 align-items: flex-start;
@@ -121,10 +123,17 @@
         }
     }
 
+    @media screen and (min-width: map-get($breakpoints, large)) {
+
+        .inside {
+            width: 81%
+        }
+    }
+
     @media screen and (min-width: map-get($breakpoints, x-large)) {
 
         .inside {
-            width: 75%
+            width: 76%
         }
     }
 }

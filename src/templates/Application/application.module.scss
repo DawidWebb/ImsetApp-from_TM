@@ -2,44 +2,74 @@
 
 .wrapper {
     @include wrapper;
-    background-color: $text-second;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    width: 100vw;
 
-    .title {
-        flex-basis: 100%;
-
-        h2 {
-            font-size: $title;
-            color: $violet;
-            text-transform: uppercase;
-        }
-
-        p {
-            color: $box;
-        }
-    }
-
-    .icons {
-        flex-basis: 35%;
+    .inside {
+        @include inside;
+        background-color: $text-second;
+        position: relative;
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
         align-items: center;
+
+
+        .title {
+            flex-basis: 100%;
+
+            h2 {
+                font-size: $title;
+                color: $violet;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: $box;
+            }
+        }
+
+        .icons {
+            flex-basis: 35%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            svg {
+                fill: $box;
+
+                &:hover {
+                    fill: $green;
+                }
+            }
+        }
+
+        .picture {
+            position: absolute;
+            bottom: -40%;
+            right: -10%;
+            width: 200px;
+            height: 250px;
+            background-image: url("../../assets/image/phone_small.jpg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 15px;
+            transform: skew(30deg, 2deg);
+
+        }
     }
 
-    .picture {
-        position: absolute;
-        bottom: -40%;
-        right: -10%;
-        width: 200px;
-        height: 250px;
-        background-image: url("../../assets/image/phone_small.jpg");
-        background-position: center;
-        background-size: cover;
-        border-radius: 15px;
-        transform: skew(30deg, 2deg);
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        width: 25vw;
 
+        .inside {
+            width: 100%
+        }
+    }
+
+    @media screen and (min-width: map-get($breakpoints, x-large)) {
+        width: 25vw;
+
+        .inside {
+            width: 100%
+        }
     }
 }

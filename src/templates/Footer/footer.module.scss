@@ -1,9 +1,9 @@
 @import "../../RootStyles/common.scss";
 
 .wrapper {
-    width: 100%;
+    @include wrapper;
     background-color: $box;
-    margin-top: 20px;
+    background-color: $box;
     padding-top: 10px;
     padding-bottom: 40px;
 
@@ -148,6 +148,81 @@
                 color: $green;
                 fill: $green;
             }
+        }
+    }
+
+    @media screen and (orientation: landscape) {
+        .inside {
+            width: 81%;
+            padding-top: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    @media screen and (min-width: map-get($breakpoints, small)) {
+        .inside {
+            padding-left: 0;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+    }
+
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        padding: 0px;
+        padding-bottom: 40px;
+
+
+        .inside {
+            align-items: flex-start;
+
+
+            .info {
+                flex-basis: 60%;
+
+
+                .infoUp {
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .rightPannel {
+                        align-items: flex-end;
+                    }
+                }
+
+                .infoDown {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-top: 1px solid $shaddow;
+
+
+                    .rightPannel {
+                        align-items: flex-start;
+
+                    }
+                }
+            }
+
+            .contact {
+                align-items: flex-end;
+                justify-content: flex-start;
+
+                margin: 0;
+                padding-top: 20px;
+
+            }
+        }
+    }
+
+    @media screen and (min-width: map-get($breakpoints, x-large)) {
+
+        .inside {
+            width: 76%;
+
+
         }
     }
 }
