@@ -2,7 +2,7 @@
 
 .wrapper {
     width: 100%;
-    background-color: $background;
+    background-color: $box;
 
     .inside {
         width: 90%;
@@ -16,7 +16,7 @@
         .burger {
             flex-basis: 10%;
             height: 30px;
-            background-color: $box;
+            background-color: $shaddow;
             display: flex;
             justify-content: center;
             align-items: center;

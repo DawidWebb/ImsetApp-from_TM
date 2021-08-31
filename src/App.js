@@ -10,7 +10,7 @@ function App() {
       <Fragment>
         <MainSwitch />
       </Fragment>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
