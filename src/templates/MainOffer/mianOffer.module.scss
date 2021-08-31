@@ -68,8 +68,8 @@
     .title {
         width: 100%;
         display: grid;
-        grid-template-columns: 40px 40px 40px 40px 40px 40px 40px;
-        grid-template-rows: 30px 30px 30px;
+        grid-template-columns: 45px 45px 45px 25px 25px 45px;
+        grid-template-rows: 25px 25px 25px;
 
 
         p {
@@ -77,14 +77,14 @@
         }
 
         p:nth-child(1) {
-            grid-area: 1/1/2/8;
+            grid-area: 1/1/2/7;
             font-size: $xl-fz;
             font-weight: 700;
             align-self: end;
         }
 
         p:nth-child(2) {
-            grid-area: 2/1/3/5;
+            grid-area: 2/1/3/4;
             align-self: center;
             font-size: $xl-fz;
 
@@ -101,17 +101,17 @@
         }
 
         p:nth-child(3) {
-            grid-area: 3/1/4/5;
+            grid-area: 3/1/4/4;
             font-size: $m-fz/1.1;
-            align-self: end;
+            align-self: center;
         }
 
         p:nth-child(4) {
             grid-area: 2/4/4/5;
-            font-size: $x-fz*2.7;
+            font-size: $x-fz*2.3;
             font-weight: 700;
             align-self: center;
-            justify-self: end;
+            justify-self: center;
 
             color: $pink;
         }
@@ -119,7 +119,8 @@
         p:nth-child(5) {
             grid-area: 3/5/4/6;
             color: $pink;
-            align-self: end;
+            align-self: center;
+            justify-self: center;
             font-weight: 700;
         }
     }

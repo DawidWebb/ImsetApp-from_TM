@@ -1,4 +1,11 @@
-import { MainOffer, OnLine, PacgagesOffer, VodOffer } from "../../templates";
+import {
+  AdditionalOfer,
+  MainOffer,
+  OnLine,
+  PacgagesOffer,
+  Support,
+  VodOffer,
+} from "../../templates";
 import styles from "./startViev.module.scss";
 
 const StartViev = () => {
@@ -17,8 +24,12 @@ const StartViev = () => {
         <div className={styles.onLine}>
           <OnLine />
         </div>
-        <div className={styles.additionalOffer}></div>
-        <div className={styles.support}></div>
+        <div className={styles.additionalOffer}>
+          <AdditionalOfer />
+        </div>
+        <div className={styles.support}>
+          <Support />
+        </div>
         <div className={styles.application}></div>
       </div>
     </div>
